@@ -216,7 +216,7 @@ spec:
     sideEffects: None
     targetPort: 9443
     type: ValidatingAdmissionWebhook
-    webhookPath: /validate-cache-example-com-v1alpha1-memcached
+    webhookPath: /validate-cache-app-com-v1alpha1-memcached
   - admissionReviewVersions:
     - v1beta1
     containerPort: 443
@@ -236,4 +236,4 @@ spec:
     sideEffects: None
     targetPort: 9443
     type: MutatingAdmissionWebhook
-    webhookPath: /mutate-cache-example-com-v1alpha1-memcached
+    webhookPath: /mutate-cache-app-com-v1alpha1-memcached
