@@ -14,7 +14,7 @@ jobs:
     steps:
 
     - name: Set OS
-      run: dpkg-reconfigure dash
+      run: sudo dpkg-reconfigure dash
 
     - name: Set up Go 1.x
       uses: actions/setup-go@v2
