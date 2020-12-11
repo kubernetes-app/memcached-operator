@@ -13,9 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    - name: Set OS
-      run: sudo dpkg-reconfigure dash
-
     - name: Set up Go 1.x
       uses: actions/setup-go@v2
       with:
@@ -31,6 +28,11 @@ jobs:
             curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
             dep ensure
         fi
+    - name: Set OS shell
+      run: |
+        ls -l `which sh`
+        sudo dpkg-reconfigure bash
+        ls -l `which sh`
 
     - name: Build
       run: go build -v ./...
