@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Current Operator version
 VERSION ?= 0.0.1
 # Default bundle image tag
